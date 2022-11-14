@@ -25,8 +25,7 @@ steps {
 script {
 def scannerHome = tool 'ss';
 withSonarQubeEnv('ss') {
-sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=pp -
-Dsonar.sources=."
+sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=pp -Dsonar.sources=."
 }
 }
 }
