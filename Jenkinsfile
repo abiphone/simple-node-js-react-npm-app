@@ -10,16 +10,16 @@ pipeline {
 				sh 'composer install'
 			}
 		}
-                    stage ('Checkout') {
-steps {
-git branch:'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git'
-}
-}
 		stage('Test') {
 			steps {
                 sh './vendor/bin/phpunit tests'
             }
 		}
+//                             stage ('Checkout') {
+// steps {
+// git branch:'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git'
+// }
+// }
         stage('Code Quality Check via SonarQube') {
 steps {
 script {
