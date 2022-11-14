@@ -23,8 +23,8 @@ pipeline {
         stage('Code Quality Check via SonarQube') {
 steps {
 script {
-def scannerHome = tool 'ss';
-withSonarQubeEnv('ss') {
+def scannerHome = tool 'ughhuj';
+withSonarQubeEnv('ughhuj') {
 sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=pp -Dsonar.sources=."
 }
 }
